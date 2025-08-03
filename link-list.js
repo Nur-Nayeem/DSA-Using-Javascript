@@ -254,3 +254,85 @@ console.log(list.getSize());
 
 // list.print()
 
+//stack using link list
+
+class LinkListStak {
+    constructor() {
+        this.list = new LinkList()
+    }
+    push(element) {
+        this.list.prepend(element)
+    }
+    pop() {
+        this.list.removeFromFront()
+    }
+    peek() {
+        return this.list.head.value
+    }
+    isEmpty() {
+        return this.list.isEmpty()
+    }
+    getSize() {
+        return this.list.getSize()
+    }
+    print() {
+        this.list.print()
+    }
+
+}
+
+
+const stk2 = new LinkListStak()
+
+// stk2.push(45)
+// stk2.push(46)
+// stk2.push(49)
+// stk2.push(43)
+// stk2.pop()
+
+// console.log(stk2.peek());
+
+
+// stk2.print()
+
+
+
+
+//queue using link list
+
+class LinkListQueue {
+    constructor() {
+        this.list = new LinkList()
+    }
+    anqueue(element) {
+        this.list.append(element)
+    }
+    dequeue() {
+        this.list.removeFromFront()
+    }
+    peek() {
+        return this.list.head.value
+    }
+    isEmpty() {
+        return this.list.isEmpty()
+    }
+    getSize() {
+        return this.list.getSize()
+    }
+    print() {
+        this.list.print()
+    }
+
+}
+
+const que2 = new LinkListQueue()
+
+que2.anqueue(34)
+que2.anqueue(11)
+que2.anqueue(32)
+
+que2.dequeue()
+console.log(que2.peek());
+
+
+que2.print()
